@@ -1,0 +1,20 @@
+using System;
+
+namespace App
+{
+	class Program
+	{
+		static void Main(string[] args)
+		{
+			// 1 Logical operations
+			// & | ^ ~
+			// XOR
+			// Shift operation
+
+			int x = 4; // 100 -
+			Console.WriteLine(x >> 1); // 10 - 2
+			Console.WriteLine(x >> 2); // 1 - 1
+			Console.ReadKey();
+		}
+	}
+}
