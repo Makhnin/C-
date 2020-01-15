@@ -1,0 +1,36 @@
+using System;
+
+namespace App
+{
+	class Program
+	{
+		static void Main(string[] args)
+		{
+			string s = Hello();
+			int c = Sum();
+			Console.WriteLine(c);
+			Console.ReadKey();
+		}
+		
+		static string Hello ()
+		{
+			return "hello world";
+		}
+		static int Sum()
+		{
+			int x = 2;
+			int y = 3;
+			int z = x + y; // 5
+			return z;
+		}
+
+		static void Method1()
+		{
+			Console.WriteLine("Method1");
+		}
+		static void Method2()
+		{
+			Console.WriteLine("Method2");
+		}
+	}
+}
