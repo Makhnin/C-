@@ -1,0 +1,28 @@
+using System;
+
+namespace App
+{
+	class Program
+	{
+		// context class
+		// method context
+		// context code block
+
+		static int x = 9;
+
+		static void Main(string[] args)
+		{
+			int x = 18;
+			x++;
+			Console.WriteLine(x);
+			Console.ReadKey();
+		}
+
+		static void Display()
+		{
+			int s = 7;
+			//d++;
+			x = x + 9;
+		}
+	}
+}
