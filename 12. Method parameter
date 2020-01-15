@@ -1,0 +1,68 @@
+using System;
+
+namespace App
+{
+	class Program
+	{
+		static void Main(string[] args)
+		{
+			// by value
+			// by link
+			// out
+
+			int perimeter;
+			int area;
+			GetData(10, 15, out area, out perimeter);
+			Console.WriteLine($"Area {area}");
+			Console.WriteLine($"perimeter {perimeter}");
+
+			int d1 = Optional(s:1, y:2, z:3, x:4);
+			int d2 = Optional(1, 2, 3);
+			int d3 = Optional(1, 2);
+
+			Console.ReadKey();
+		}
+		// named parameter
+		// optional parameter
+		static int Optional (int x, int y, int z = 5, int s = 7)
+		{
+			return x + y + z + s;
+		}
+		static void GetData(int width, int height, out int area, out int perimeter)
+		{
+			perimeter = (width + height) * 2;
+			area = width * height;
+		}
+		static void AdditionRef(ref int x, int y)
+		{
+			x = x + y;
+			Console.WriteLine($"AdditionRef x = {x}");
+		}
+		static void AdditionalVal (int x, int y)
+		{
+			x = x + y;
+			Console.WriteLine($"AdditionalVal x = {x}");
+		}
+
+		static string Hello ()
+		{
+			return "hello world";
+		}
+		static int Sum()
+		{
+			int x = 2;
+			int y = 3;
+			int z = x + y; // 5
+			return z;
+		}
+
+		static void Method1()
+		{
+			Console.WriteLine("Method1");
+		}
+		static void Method2()
+		{
+			Console.WriteLine("Method2");
+		}
+	}
+}
