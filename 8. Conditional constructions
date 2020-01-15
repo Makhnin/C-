@@ -1,0 +1,54 @@
+using System;
+
+namespace App
+{
+	class Program
+	{
+		static void Main(string[] args)
+		{
+			// if... else switch..case
+			int num1 = 8;
+			int num2 = 16;
+
+			if (num1 > num2 && num1 == 8)
+			{
+				Console.WriteLine("num more than num2");
+			}
+			else if (num1 < num2)
+			{
+				Console.WriteLine($"{num1} less than {num2}");
+			}
+			else
+			{
+				Console.WriteLine($"{num1} equally {num2}");
+			}
+
+			Console.WriteLine("Press Y or N");
+			string selection = Console.ReadLine();
+
+			switch(selection)
+			{
+				case "Y":
+					Console.WriteLine("You pressed key Y");
+					break;
+				case "N":
+					Console.WriteLine("You pressed key N");
+					break;
+				default:
+					Console.WriteLine("You pressed an unknown key");
+					break;
+			}
+
+			// Ternary operator op1?op2:op3;
+			int x = 3;
+			int y = 2;
+			Console.WriteLine("Press + or -");
+			string selection2 = Console.ReadLine();
+
+			int z = selection2 == "+" ? (x + y) : (x - y);
+			Console.WriteLine(z);
+
+			Console.ReadKey();
+		}
+	}
+}
