@@ -1,0 +1,23 @@
+using System;
+
+namespace App
+{
+	class Program
+	{
+		static void Main(string[] args)
+		{
+			int[] numbers = { 1, 2, 3, 4 }; //0 - 3
+
+			foreach(int i in numbers)
+			{
+				Console.WriteLine(i);
+			}
+			for(int i=0; i < numbers.Length; i++)
+			{
+				Console.WriteLine(numbers[i]);
+			}
+
+			Console.ReadKey();
+		}
+	}
+}
