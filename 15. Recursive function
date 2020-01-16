@@ -1,0 +1,38 @@
+using System;
+
+namespace App
+{
+	class Program
+	{
+		// F(n) = n!;
+		static int Factorial (int n)
+		{
+			if (n == 0)
+				return 1;
+			else
+				return n * Factorial(n -1);
+		}
+		// f(n) = f(n=1) + f(n-2)
+		// 1, 1, 2, 3, 5, 8, 13, 21, ...
+		// F(0) = 0; F(1) = 1
+
+		static int Fibonachi (int n)
+		{
+			if (n == 0)
+				return 0;
+			if (n == 1)
+				return 1;
+			else
+				return Fibonachi(n - 1) + Fibonachi(n - 2);
+		}
+		static void Main(string[] args)
+		{
+			int x = Fibonachi(8); // 21
+
+			Console.WriteLine(x);
+			Console.WriteLine(Fibonachi(4)); // 3
+			Console.WriteLine(Fibonachi(6)); // 8
+			Console.ReadKey();
+		}
+	}
+}
