@@ -1,0 +1,51 @@
+using System;
+
+namespace App
+{
+	enum Days
+	{
+		Monday = 1, // 0
+		Tuesday = 2, // 2
+		Wednesday = 4, // 3
+		Thursday = 8, // 4
+		Friday = 16,
+		Saturday, // 17
+		Sunday // 18
+	}
+	class Program
+	{
+		enum Operation
+		{
+			Add, 
+			Subtract,
+			Multiply,
+			Divide
+		}
+		static void ApplyOperation(double x, double y, Operation op)
+		{
+			double result = 0.0;
+			switch(op)
+			{
+				case Operation.Add:
+					result = x + y;
+					break;
+				case Operation.Subtract:
+					result = x - y;
+					break;
+				case Operation.Multiply:
+					result = x * y;
+					break;
+				case Operation.Divide:
+					result = x / y;
+					break;
+			}
+			Console.WriteLine(result);
+		}
+		static void Main (string[] args)
+		{
+			ApplyOperation(10, 15, Operation.Add); // 25
+			ApplyOperation(10, 15, Operation.Multiply); // 150
+			Console.ReadKey();
+		}
+	}
+}
